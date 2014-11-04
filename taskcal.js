@@ -6,7 +6,7 @@ var calModel = {
   dbName:"calendar",
   fetchAll:function(callback){
     $.couch.urlPrefix = "http://localhost:5984";
-    $.couch.db("calendar").allDocs({
+    $.couch.db(this.dbName).allDocs({
         include_docs:true,
         success: function(data) {
           console.log(data);

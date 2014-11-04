@@ -57,8 +57,12 @@
 			},
 			eventAfterRender:function(event, element, view ) {
 				if(!event._rev){ // New Record
-					calModel.update(event,function(){$('#calendar').fullCalendar('refetchAll');
-});
+					calModel.update(
+            event,
+            function(){
+              $('#calendar').fullCalendar('refetchAll');
+            }
+          );
 				}
 			},
 			eventDrop:function( event, delta, revertFunc, jsEvent, ui, view ) {
@@ -132,8 +136,5 @@ frequentlyTask.fetchAll(function(tasks){
 
 
 </script>
-
-
-
 </body>
 </html>
